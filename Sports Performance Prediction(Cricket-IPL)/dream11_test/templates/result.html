@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dream11 Team Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Dream11 Team Prediction</h1>
+    <h2>{{ team1 }} vs {{ team2 }}</h2>
+    <div class="result">
+        <p><strong>Composition:</strong> {{ composition[0] }} Batsmen, {{ composition[1] }} Bowlers, {{ composition[2] }} All-Rounders, {{ composition[3] }} Wicket-Keepers</p>
+        <h3>Selected Players:</h3>
+        <ul>
+            {% for player, role, credits, team in dream11_team %}
+                <li><span class="player-{{ team }} role-{{ role }}">{{ player }}</span> ({{ role }}, {{ credits }} credits)</li>
+            {% endfor %}
+        </ul>
+        <h3>If {{ team1 }} bats first:</h3>
+        <p><strong>Captain:</strong> <span class="player-{% for p, _, _, t in dream11_team %}{% if p == captain %}{{ t }}{% endif %}{% endfor %} role-{% for p, r, _, _ in dream11_team %}{% if p == captain %}{{ r }}{% endif %}{% endfor %}">{{ captain }}</span></p>
+        <p><strong>Vice-Captain:</strong> <span class="player-{% for p, _, _, t in dream11_team %}{% if p == vice_captain %}{{ t }}{% endif %}{% endfor %} role-{% for p, r, _, _ in dream11_team %}{% if p == vice_captain %}{{ r }}{% endif %}{% endfor %}">{{ vice_captain }}</span></p>
+        <h3>If {{ team2 }} bats first:</h3>
+        <p><strong>Captain:</strong> <span class="player-{% for p, _, _, t in dream11_team %}{% if p == captain_bowl %}{{ t }}{% endif %}{% endfor %} role-{% for p, r, _, _ in dream11_team %}{% if p == captain_bowl %}{{ r }}{% endif %}{% endfor %}">{{ captain_bowl }}</span></p>
+        <p><strong>Vice-Captain:</strong> <span class="player-{% for p, _, _, t in dream11_team %}{% if p == vice_captain_bowl %}{{ t }}{% endif %}{% endfor %} role-{% for p, r, _, _ in dream11_team %}{% if p == vice_captain_bowl %}{{ r }}{% endif %}{% endfor %}">{{ vice_captain_bowl }}</span></p>
+    </div>
+    <a href="{{ url_for('index') }}"><button>Start Over</button></a>
+</body>
+</html>

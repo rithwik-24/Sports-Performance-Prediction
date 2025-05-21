@@ -1,0 +1,203 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+h1, h2, h3 {
+    color: #333;
+    text-align: center;
+}
+
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+select, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.team-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.team {
+    width: 48%;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.role {
+    margin: 10px 0;
+}
+
+.result {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 5px 0;
+}
+
+.flash {
+    color: red;
+    text-align: center;
+}
+
+/* Team-specific styles */
+.team-GT {
+    background-color: #1C2526;
+    color: #D4A017;
+}
+.team-MI {
+    background-color: #0052A5;
+    color: #FFD700;
+}
+.team-RCB {
+    background-color: #D11F2F;
+    color: #000000;
+}
+.team-PBKS {
+    background-color: #ED1C24;
+    color: #C0C0C0;
+}
+.team-SRH {
+    background-color: #F26522;
+    color: #000000;
+}
+.team-CSK {
+    background-color: #FFC107;
+    color: #2E6DB4;
+}
+.team-DC {
+    background-color: #004C93;
+    color: #EF2121;
+}
+.team-KKR {
+    background-color: #3F2587;
+    color: #FFD700;
+}
+.team-LSG {
+    background-color: #2B4F9F;
+    color: #00A651;
+}
+.team-RR {
+    background-color: #EE2E7B;
+    color: #1B2E7A;
+}
+
+/* Player name styling for Dream11 team with team colors */
+.player-GT {
+    background-color: #1C2526;
+    color: #D4A017;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+.player-MI {
+    background-color: #0052A5;
+    color: #FFD700;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+.player-RCB {
+    background-color: #D11F2F;
+    color: #000000;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+.player-PBKS {
+    background-color: #ED1C24;
+    color: #C0C0C0;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+.player-SRH {
+    background-color: #F26522;
+    color: #000000;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+.player-CSK {
+    background-color: #FFC107;
+    color: #2E6DB4;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+.player-DC {
+    background-color: #004C93;
+    color: #EF2121;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+.player-KKR {
+    background-color: #3F2587;
+    color: #FFD700;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+.player-LSG {
+    background-color: #2B4F9F;
+    color: #00A651;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+.player-RR {
+    background-color: #EE2E7B;
+    color: #1B2E7A;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+/* Role-specific colors */
+.role-Batsman {
+    background-color: #28a745; /* Green for Batsmen */
+    color: white;
+}
+.role-Bowler {
+    background-color: #007bff; /* Blue for Bowlers */
+    color: white;
+}
+.role-All-Rounder {
+    background-color: #6f42c1; /* Purple for All-Rounders */
+    color: white;
+}
+.role-Wicket-Keeper {
+    background-color: #ffc107; /* Yellow for Wicket-Keepers */
+    color: #333;
+}

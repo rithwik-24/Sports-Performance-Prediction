@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select Players</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Select Playing 11 for {{ team1 }} vs {{ team2 }}</h1>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <p class="flash">{{ message }}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <form method="POST">
+        <div class="team-section">
+            <div class="team team-{{ team1 }}">
+                <h2>{{ team1 }}</h2>
+                {% for role, players in team1_by_role.items() %}
+                    {% if players %}
+                        <div class="role">
+                            <h3>{{ role }}</h3>
+                            {% for player in players %}
+                                <label><input type="checkbox" name="team1_players" value="{{ player }}"> {{ player }}</label><br>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div class="team team-{{ team2 }}">
+                <h2>{{ team2 }}</h2>
+                {% for role, players in team2_by_role.items() %}
+                    {% if players %}
+                        <div class="role">
+                            <h3>{{ role }}</h3>
+                            {% for player in players %}
+                                <label><input type="checkbox" name="team2_players" value="{{ player }}"> {{ player }}</label><br>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        <button type="submit">Predict Dream11 Team</button>
+    </form>
+</body>
+</html>
